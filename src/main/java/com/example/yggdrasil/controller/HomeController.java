@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Slf4j
-@RequestMapping("/Yggdrasil")
+@RequestMapping("/yggdrasil")
 
 @Controller
 public class HomeController {
@@ -16,11 +16,47 @@ public class HomeController {
         return "redirect:/Home";
     }
 
-    @GetMapping("/Home")
+    @GetMapping("/home")
     public String home() {
-        log.info("HomeController 테스트 home() called");
+        log.info("HomeController - home() called");
+
+
         return "home";
     }
 
+    @GetMapping("/discover")
+    public String discover() {
+        log.info("HomeController - discover() called");
+
+        return "discover";
+    }
+
+    @GetMapping("/search")
+    public String search() {
+        log.info("HomeController - search() called");
+
+        return "search";
+    }
+
+    @GetMapping("/mypage")
+    public String mypage() {
+        log.info("HomeController - mypage() called");
+
+        return "mypage";
+    }
+
+    @GetMapping("/cart")
+    public String cart() {
+        log.info("HomeController - cart() called");
+
+        return "cart";
+    }
+
+    @GetMapping("/login")
+    public String login() {
+        log.info("HomeController - login() called");
+
+        return "login";
+    }
 
 }
