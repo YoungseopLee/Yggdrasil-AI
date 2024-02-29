@@ -13,13 +13,12 @@ public class HomeController {
 
     @GetMapping("/")
     public String defaultPage() {
-        return "redirect:/Home";
+        return "redirect:/home";
     }
 
     @GetMapping("/home")
     public String home() {
         log.info("HomeController - home() called");
-
 
         return "home";
     }
@@ -50,13 +49,6 @@ public class HomeController {
         log.info("HomeController - cart() called");
 
         return "cart";
-    }
-
-    @GetMapping("/login")
-    public String login() {
-        log.info("HomeController - login() called");
-
-        return "login";
     }
 
 }

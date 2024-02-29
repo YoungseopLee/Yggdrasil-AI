@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yggdrasil AI Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" type="text/css" href="/css/login.css">
+</head>
+
+<body class="bg-gray-200">
+
+<form action="/loginProc" method="post"> <!-- 로그인요청을 보내니까 post -->
+    <div class="login-section">
+        <div class="min-h-screen flex flex-col items-center justify-center">
+
+            <div class="mb-10">
+                <a href="/yggdrasil/home"><h1 class="text-4xl font-bold logoText">Yggdrasil AI</h1></a>
+            </div>
+
+            <!-- 로그인 영역 -->
+            <div class="mb-3 col-3 login_textbox">
+                <input type="text" class="form=control textbox textBox_top" id="email" name="email" placeholder="이메일"/>
+                <input type="password" class="form=control textbox textBox_bot" id="password" name="password" placeholder="비밀번호"/>
+            </div>
+
+            <div class="mb-3 col-3 button-container">
+                <button type="button" id="signup-button" class="btn btn-primary btn-cancel bg-green-500 text-white px-4 py-2 rounded-md">signup</button>
+                <button type="submit" id="login-button" class="btn btn-primary btn-cancel bg-blue-500 text-white px-4 py-2 rounded-md">login</button>
+            </div>
+
+            <div class="mb-4 btnIndex">
+                <a href="/oauth2/authorization/naver"><img src="/img/login/naver.png"></a>
+            </div>
+            <div class="mb-4 btnIndex">
+                <a href="your_target_page.html"><img src="/img/login/kakao.png"></a>
+            </div>
+
+        </div>
+    </div>
+
+</form>
+
+<script src="/js/login.js"></script>
+</body>
+</html>
