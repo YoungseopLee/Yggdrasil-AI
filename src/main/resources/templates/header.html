@@ -1,17 +1,41 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/html">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Header Fragment</title>
     <link rel="stylesheet" type="text/css" href="/css/header.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
 </head>
-<body>
-    <th:block th:fragment="header">
 
-        <h1>Header</h1>
+<body class="whitespace-nowrap">
+<th:block th:fragment="header">
+    <header class="bg-white text-black p-5 shadow-md">
+        <div class="container mx-auto flex justify-center items-center">
+            <div class="text-lg font-semibold mr-20">
+                <a href="/yggdrasil/home">Yggdrasil AI</a>
+            </div>
 
-    </th:block>
+            <nav class="flex space-x-4 mr-auto"> <!-- home, discover -->
+                <a href="/yggdrasil/home" class="text-gray-600 hover:text-gray-800">Home</a>
+                <a href="/yggdrasil/discover" class="text-gray-600 hover:text-gray-800">Discover</a>
+            </nav>
 
-    <script src="js/header.js"></script>
+            <form id="searchForm" class="flex items-center mr-auto" action="/yggdrasil/search" method="GET"> <!-- search -->
+                <input type="search" name = "keyword" placeholder="title, author, tag..." class="bg-gray-200 focus:outline-none rounded-l-full rounded-r-none px-4 py-2 w-full max-w-3xl">
+                <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-r-full">search</button>
+            </form>
+
+            <div class="flex space-x-4 items-center"> <!-- profileImg, login, logout, cart, play -->
+                <a href="/yggdrasil/mypage"><img id="profilePic" class="profile-image min-w-[30px] max-w-[30px] min-h-[30px] max-h-[30px] rounded-full object-cover align-middle"></a>
+                <a href="/yggdrasil/login" class="text-gray-600 hover:text-gray-800">Login</a>
+                <a href="/yggdrasil/cart" class="text-gray-600 hover:text-gray-800">cart</a>
+                <button id="playButton" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600" >PLAY</button>
+            </div>
+
+        </div>
+    </header>
+</th:block>
+<script src="js/header.js"></script>
 </body>
 </html>
