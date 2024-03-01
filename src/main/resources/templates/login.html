@@ -13,7 +13,7 @@
 <body class="bg-gray-200">
 
 <form action="/loginProc" method="post"> <!-- 로그인요청을 보내니까 post -->
-    <div class="login-section">
+    <div class="flex flex-col items-center justify-center mx-auto bg-white relative mt-1" style="max-width: 55%;">
         <div class="min-h-screen flex flex-col items-center justify-center">
 
             <div class="mb-10">
@@ -21,21 +21,21 @@
             </div>
 
             <!-- 로그인 영역 -->
-            <div class="mb-3 col-3 login_textbox">
+            <div class="mb-3 col-3 flex justify-center flex-col items-center">
                 <input type="text" class="form=control textbox textBox_top" id="email" name="email" placeholder="이메일"/>
                 <input type="password" class="form=control textbox textBox_bot" id="password" name="password" placeholder="비밀번호"/>
             </div>
 
-            <div class="mb-3 col-3 button-container">
-                <button type="button" id="signup-button" class="btn btn-primary btn-cancel bg-green-500 text-white px-4 py-2 rounded-md">signup</button>
-                <button type="submit" id="login-button" class="btn btn-primary btn-cancel bg-blue-500 text-white px-4 py-2 rounded-md">login</button>
+            <div class="mb-3 col-3 flex justify-end space-x-4">
+                <button type="submit" id="login-button" class="bg-blue-500 hover:bg-blue-400 text-white px-4 py-2 rounded-md">로그인</button>
+                <button type="button" id="signup-button" class="bg-green-500 hover:bg-green-400 text-white px-4 py-2 rounded-md">회원가입</button>
             </div>
 
-            <div class="mb-4 btnIndex">
-                <a href="/oauth2/authorization/naver"><img src="/img/login/naver.png"></a>
+            <div class="mb-2 btnIndex">
+                <a href="/oauth2/authorization/naver"><img src="/img/login/naver.png" class="w-100 h-10"></a>
             </div>
-            <div class="mb-4 btnIndex">
-                <a href="your_target_page.html"><img src="/img/login/kakao.png"></a>
+            <div class="mb-2 btnIndex">
+                <a href="your_target_page.html"><img src="/img/login/kakao.png" class="w-100 h-10"></a>
             </div>
 
         </div>
