@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yggdrasil AI Login</title>
+    <title>Yggdrasil AI</title>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" type="text/css" href="/css/login.css">
@@ -22,13 +22,13 @@
 
             <!-- 로그인 영역 -->
             <div class="mb-3 col-3 flex justify-center flex-col items-center">
-                <input type="text" class="form=control textbox textBox_top" id="email" name="email" placeholder="이메일"/>
-                <input type="password" class="form=control textbox textBox_bot" id="password" name="password" placeholder="비밀번호"/>
+                <input type="text" id="email" class="form-control textbox textBox_top"  name="email" placeholder="email"/>
+                <input type="password" id="password" class="form-control textbox textBox_bot"  name="password" placeholder="passwd"/>
             </div>
 
             <div class="mb-3 col-3 flex justify-end space-x-4">
-                <button type="submit" id="login-button" class="bg-blue-500 hover:bg-blue-400 text-white px-4 py-2 rounded-md">로그인</button>
-                <button type="button" id="signup-button" class="bg-green-500 hover:bg-green-400 text-white px-4 py-2 rounded-md">회원가입</button>
+                <button type="submit" id="loginButton" class="bg-blue-500 hover:bg-blue-400 text-white px-4 py-2 rounded-md">login</button>
+                <button type="button" id="signupButton" class="bg-green-500 hover:bg-green-400 text-white px-4 py-2 rounded-md" onclick="location.href='/yggdrasil/signup'">signup</button>
             </div>
 
             <div class="mb-2 btnIndex">
