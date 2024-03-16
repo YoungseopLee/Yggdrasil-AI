@@ -19,6 +19,7 @@ public class MemberDto {
     private String memberName;
     private String memberEmail;
     private String memberPhone;
+    private String memberNickname;
     private byte[] memberProfileImg;
 
     private LocalDateTime regDate;

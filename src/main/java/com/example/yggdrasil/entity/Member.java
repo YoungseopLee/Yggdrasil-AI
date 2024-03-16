@@ -26,9 +26,7 @@ public class Member extends BaseEntity{
     private String memberName;
     private String memberEmail;
     private String memberPhone;
-
+    private String memberNickname;
     private byte[] memberProfileImg;
-
-
 
 }
